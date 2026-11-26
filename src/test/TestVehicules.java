@@ -51,6 +51,7 @@ public class TestVehicules {
 
         System.out.println("Nombre de véhicules créés : " + Vehicule.getCompteurVehicules());
         System.out.println("Devise : " + Vehicule.DEVISE);
+
         sc.close();
 
     }
