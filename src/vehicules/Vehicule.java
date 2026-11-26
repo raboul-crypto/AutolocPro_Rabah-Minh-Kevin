@@ -26,14 +26,24 @@ public class Vehicule {
         this.disponible = true;
         System.out.println("Constructeur d'initialisation appelé");
     }
-    public Vehicule(Vehicule v){
+    public Vehicule(Vehicule v) {
         System.out.println("Constructeur de copie appelé");
-        immatriculation=v.immatriculation;
-        marque=v.marque;
-        modele=v.modele;
-        kilometrage=v.kilometrage;
-        tarifJournalier=v.tarifJournalier;
-        disponible=v.disponible;
+        if (v == null) {
+            System.out.println("Erreur : véhicule à copier null, valeurs par défaut utilisées");
+            immatriculation = "N/A";
+            marque = "N/A";
+            modele = "N/A";
+            kilometrage = 0;
+            tarifJournalier = 0.0;
+            disponible = true;
+        } else {
+            immatriculation = v.immatriculation;
+            marque = v.marque;
+            modele = v.modele;
+            kilometrage = v.kilometrage;
+            tarifJournalier = v.tarifJournalier;
+            disponible = v.disponible;
+        }
     }
     public void rouler(int km){
         kilometrage+=km;
