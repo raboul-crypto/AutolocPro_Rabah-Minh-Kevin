@@ -1,11 +1,47 @@
 package clients;
 
 public class Client {
-    public String nom;
-    public String prenom;
-    public String numeroPermis;
-    public String telephone;
-    public int anneeNaissance;
+    private String nom;
+    private String prenom;
+    private String numeroPermis;
+    private String telephone;
+    private int anneeNaissance;
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getNumeroPermis() {
+        return numeroPermis;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public int getAnneeNaissance() {
+        return anneeNaissance;
+    }
+
+    public void setAnneeNaissance(int anneeNaissance) {
+        this.anneeNaissance = anneeNaissance;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
     public Client(){
         nom="N/A";

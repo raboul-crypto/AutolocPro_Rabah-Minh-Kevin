@@ -1,12 +1,64 @@
 package vehicules;
 
 public class Vehicule {
-    public String immatriculation;
-    public String marque;
-    public String modele;
-    public int kilometrage;
-    public double tarifJournalier;
-    public boolean disponible;
+    private String immatriculation;
+    private String marque;
+    private String modele;
+    private int kilometrage;
+    private double tarifJournalier;
+    private boolean disponible;
+
+    public String getImmatriculation() {
+        return immatriculation;
+    }
+
+    public String getMarque() {
+        return marque;
+    }
+
+    public String getModele() {
+        return modele;
+    }
+
+    public int getKilometrage() {
+        return kilometrage;
+    }
+
+    public double getTarifJournalier() {
+        return tarifJournalier;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public void setTarifJournalier(double tarifJournalier) {
+        if (tarifJournalier < 0) {
+            System.out.println("Erreur : tarif négatif refusé (" + tarifJournalier + ")");
+        } else {
+            this.tarifJournalier = tarifJournalier;
+        }
+    }
+
+    public void setKilometrage(int kilometrage) {
+        if (kilometrage < 0) {
+            System.out.println("Erreur : kilométrage négatif refusé (" + kilometrage + ")");
+        } else {
+            this.kilometrage = kilometrage;
+        }
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
 
     public Vehicule(){
         immatriculation = "N/A";
@@ -45,8 +97,12 @@ public class Vehicule {
             disponible = v.disponible;
         }
     }
-    public void rouler(int km){
-        kilometrage+=km;
+    public void rouler(int km) {
+        if (km < 0) {
+            System.out.println("Erreur : distance négative refusée (" + km + ")");
+        } else {
+            kilometrage += km;
+        }
     }
     public void afficher(){
         System.out.println("Vehicule{immatriculation='" + immatriculation
