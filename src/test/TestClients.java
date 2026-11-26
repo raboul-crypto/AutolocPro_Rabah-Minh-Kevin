@@ -15,6 +15,5 @@ public class TestClients {
                 + " ,permis " + c2.numeroPermis + " ,tel " + c2.telephone
                 + " ,né en " + c2.anneeNaissance);
         System.out.println("Âge : " + c2.calculerAge(2026) + " ans");
-        System.out.println("Nombre de clients créés : " + Client.getCompteurClients());
     }
 }
