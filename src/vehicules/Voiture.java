@@ -18,5 +18,37 @@ public class Voiture extends Vehicule {
         this.boiteAutomatique=auto;
         System.out.println("Constructeur d'initialisation de Voiture appelé");
     }
+<<<<<<< HEAD
 }
 
+=======
+    public int getNombrePlaces() {
+        return nombrePlaces;
+    }
+
+    public void setNombrePlaces(int nombrePlaces) {
+        this.nombrePlaces = nombrePlaces;
+    }
+
+    public String getTypeCarburant() {
+        return typeCarburant;
+    }
+
+    public void setTypeCarburant(String typeCarburant) {
+        this.typeCarburant = typeCarburant;
+    }
+
+    public boolean isBoiteAutomatique() {
+        return boiteAutomatique;
+    }
+
+    public void setBoiteAutomatique(boolean boiteAutomatique) {
+        this.boiteAutomatique = boiteAutomatique;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " " + nombrePlaces + " places ," + typeCarburant+ " ,boîte " +(boiteAutomatique ? "automatique" : "manuelle");
+    }
+}
+>>>>>>> 6ee839360f6b28f943346d90b610f14ced44b0d2
