@@ -92,4 +92,23 @@ public class Client {
     public int calculerAge(int anneCourante){
         return anneCourante-anneeNaissance;
     }
+    @Override
+    public String toString() {
+        return "Client{nom='" + nom + "', prenom='" + prenom
+                + "', permis='" + numeroPermis + "', tel='" + telephone
+                + "', naissance=" + anneeNaissance + "}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Client autre = (Client) obj;
+        return this.numeroPermis.equals(autre.numeroPermis);
+    }
+
+    @Override
+    public int hashCode() {
+        return numeroPermis.hashCode();
+    }
 }
