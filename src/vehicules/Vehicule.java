@@ -3,12 +3,12 @@ package vehicules;
 public class Vehicule {
     public static final String DEVISE = "EUR";
     private static int compteurVehicules = 0;
-    private String immatriculation;
-    private String marque;
-    private String modele;
-    private int kilometrage;
-    private double tarifJournalier;
-    private boolean disponible;
+    protected String immatriculation;
+    protected String marque;
+    protected String modele;
+    protected int kilometrage;
+    protected double tarifJournalier;
+    protected boolean disponible;
 
     public static int getCompteurVehicules() {
         return compteurVehicules;
